@@ -9,27 +9,27 @@ const aimeAvatarImg = '/src/assets/images/aime_avatar_1785225559644.jpg';
 
 export const PERSONAL_INFO = {
   name: "Aime Nsengiyumva",
-  title: "Software Engineer | AI Developer | UI/UX Designer",
+  title: "Software Developer | AI Developer | UI/UX Designer",
   roles: [
-    "Software Engineer",
+    "Software Developer",
     "AI & ML Developer",
     "UI/UX Designer",
     "Full-Stack Web Developer"
   ],
   avatar: aimeAvatarImg,
   location: "Kigali, Rwanda (Open to Global Remote Roles)",
-  email: "aime.nsengiyumva@gmail.com",
-  github: "https://github.com/aimensengiyumva",
-  linkedin: "https://linkedin.com/in/aime-nsengiyumva",
+  email: "aime200816@gmail.com",
+  github: "https://github.com/Aime0816",
+  linkedin: "https://linkedin.com/in/aime-nsengiyumva-dev",
   twitter: "https://x.com/aime_nsengi",
-  bio: "I am a passionate Software Engineer and AI Developer dedicated to engineering intelligent, high-impact web applications with scalable architectures and intuitive user interfaces. With expertise across full-stack development, modern machine learning APIs, and design systems, I transform complex ideas into reliable digital products.",
+  bio: "I am a passionate Software Developer and AI Developer dedicated to engineering intelligent, high-impact web applications with scalable architectures and intuitive user interfaces. With expertise across full-stack development, modern machine learning APIs, and design systems, I transform complex ideas into reliable digital products.",
   aboutDetailed: [
     "My journey in tech is driven by a deep curiosity about how intelligent algorithms and refined human-centered design can converge to solve pressing real-world challenges. Whether it's building AI-driven community governance tools, healthcare platforms for maternal well-being, or high-throughput e-commerce engines, I focus on clean code, performance, and accessibility.",
     "I specialize in React, Next.js, TypeScript, Tailwind CSS, Node.js, Express, PHP, MySQL, MongoDB, and integrate state-of-the-art AI models like Gemini and OpenAI to craft seamless, interactive digital experiences."
   ],
   stats: [
     { label: "Projects Completed", value: "15+" },
-    { label: "Hackathons Won", value: "3" },
+    { label: "Hackathons ", value: "3" },
     { label: "Technologies Mastered", value: "12+" },
     { label: "Code Commit Count", value: "1.2k+" }
   ],
@@ -55,12 +55,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     description: "Building responsive, modern, and accessible user interfaces with dynamic interactivity.",
     iconName: "Layout",
     skills: [
-      { name: "React", level: 92, highlight: true, experienceYears: "3+ yrs" },
-      { name: "Next.js", level: 90, highlight: true, experienceYears: "3+ yrs" },
-      { name: "TypeScript", level: 88, highlight: true, experienceYears: "3+ yrs" },
-      { name: "Tailwind CSS", level: 95, highlight: true, experienceYears: "3+ yrs" },
-      { name: "JavaScript (ES6+)", level: 94, highlight: false, experienceYears: "4+ yrs" },
-      { name: "HTML5 & CSS3", level: 96, highlight: false, experienceYears: "4+ yrs" }
+      { name: "React", level: 92, highlight: true, experienceYears: "2+ yrs" },
+      { name: "Next.js", level: 90, highlight: true, experienceYears: "2+ yrs" },
+      { name: "TypeScript", level: 88, highlight: true, experienceYears: "2+ yrs" },
+      { name: "Tailwind CSS", level: 95, highlight: true, experienceYears: "2+ yrs" },
+      { name: "JavaScript (ES6+)", level: 94, highlight: false, experienceYears: "3+ yrs" },
+      { name: "HTML5 & CSS3", level: 96, highlight: false, experienceYears: "3+ yrs" }
     ]
   },
   {
@@ -68,10 +68,10 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     description: "Architecting secure server-side logic, RESTful APIs, and scalable backend workflows.",
     iconName: "Server",
     skills: [
-      { name: "Node.js", level: 88, highlight: true, experienceYears: "3+ yrs" },
-      { name: "Express.js", level: 90, highlight: true, experienceYears: "3+ yrs" },
+      { name: "Node.js", level: 88, highlight: true, experienceYears: "2+ yrs" },
+      { name: "Express.js", level: 90, highlight: true, experienceYears: "2+ yrs" },
       { name: "PHP", level: 82, highlight: false, experienceYears: "2+ yrs" },
-      { name: "REST API Design", level: 92, highlight: true, experienceYears: "3+ yrs" }
+      { name: "REST API Design", level: 92, highlight: true, experienceYears: "2+ yrs" }
     ]
   },
   {
@@ -118,7 +118,7 @@ export const PROJECTS: Project[] = [
     image: civiclensImg,
     category: "AI & ML",
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Gemini API", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com/aimensengiyumva/civiclens-ai",
+    githubUrl: "https://github.com/Aime0816/CivicLens-AI",
     liveUrl: "https://civiclens-ai.demo.app",
     featured: true,
     keyFeatures: [
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     image: maternalHubImg,
     category: "Full Stack",
     technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "MySQL", "OpenAI API"],
-    githubUrl: "https://github.com/aimensengiyumva/maternalhub",
+    githubUrl: "https://github.com/06bruce/Maternal_Client",
     liveUrl: "https://maternalhub.demo.app",
     featured: true,
     keyFeatures: [
