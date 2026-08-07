@@ -4,7 +4,7 @@ import { Project, SkillCategory, ExperienceItem } from '../types';
 const civiclensImg = '/src/assets/images/civiclens_ai_preview_1785225507841.jpg';
 const maternalHubImg = '/src/assets/images/maternal_hub_preview_1785225521356.jpg';
 const shopMsImg = '/src/assets/images/shop_ms_preview_1785225533718.jpg';
-const studentMsImg = '/src/assets/images/student_ms_preview_1785225547225.jpg';
+const VeriLensImg = '/src/assets/images/verilens_ai_preview_1785225547225.jpg';
 const aimeAvatarImg = '/src/assets/images/aime_avatar_1785225559644.jpg';
 
 export const PERSONAL_INFO = {
@@ -178,9 +178,8 @@ export const PROJECTS: Project[] = [
   longDescription:
     "VeriLens AI is designed to reduce the spread of fake news and misleading content by combining Generative AI, Natural Language Processing (NLP), and image verification techniques. Users can submit text, screenshots, links, or images, and the system analyzes the content, identifies suspicious claims, compares them with reliable sources, explains why a claim is true, false, or misleading, and provides a confidence score. The platform is built to support journalists, students, researchers, organizations, and the general public in making informed decisions based on verified information.",
 
-  image: "C:\\Users\\User\\Documents\\Projects\\Portfolio-webpage\\src\\assets\\images\\civiclens_ai_preview_1785225507841.jpg",
-
-  category: "AI & ML",
+  image: "verilensImg",
+    category: "AI & ML",
 
   technologies: [
     "Next.js",
@@ -224,13 +223,15 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
     location: "Kigali, Rwanda",
     period: "2026 - Present",
     description: [
-      "Contributing to the development and maintenance of modern web applications using JavaScript, PHP, MySQL, and Tailwind CSS.",
+      "Contributing to the development and maintenance of modern web applications using JavaScript,NodeJs, Express.js, PHP, MySQL, and Tailwind CSS.",
       "Collaborating with senior developers to implement new features, debug applications, and improve overall system performance.",
       "Applying software engineering best practices including Git version control, database design, and responsive UI development.",
       "Gaining hands-on experience in real-world software development workflows and agile collaboration."
     ],
     technologies: [
       "JavaScript",
+      "Node.js",
+      "Express.js",
       "PHP",
       "MySQL",
       "Tailwind CSS",
@@ -294,7 +295,7 @@ export const EXPERIENCE_ITEMS: ExperienceItem[] = [
   {
     id: "exp-4",
     type: "education",
-    role: "Level 4 Software Development",
+    role: "Software Development Student",
     organization: "Institut Don Bosco Kabarondo TSS",
     location: "Rwanda",
     period: "2023 - Present",
