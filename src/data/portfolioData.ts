@@ -5,7 +5,7 @@ const civiclensImg = '/src/assets/images/civiclens_ai_preview_1785225507841.jpg'
 const maternalHubImg = '/src/assets/images/maternal_hub_preview_1785225521356.jpg';
 const shopMsImg = '/src/assets/images/shop_ms_preview_1785225533718.jpg';
 const VeriLensImg = '/src/assets/images/verilens_ai_preview_1785225547225.jpg';
-const aimeAvatarImg = '/src/assets/images/aime_avatar_1785225559644.jpg';
+const aimeAvatarImg = '/src/assets/images/Me.png';
 
 export const PERSONAL_INFO = {
   name: "Aime Nsengiyumva",

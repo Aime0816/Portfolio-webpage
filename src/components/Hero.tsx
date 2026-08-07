@@ -190,7 +190,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume, onOpenAssistant }) => 
                 ) : (
                   <>
                     <Mail className="w-4 h-4 text-blue-400" />
-                    <span>aime.nsengiyumva@gmail.com</span>
+                    <span>{PERSONAL_INFO.email}</span>
                   </>
                 )}
               </button>
