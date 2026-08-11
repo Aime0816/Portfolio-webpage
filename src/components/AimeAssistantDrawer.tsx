@@ -23,7 +23,6 @@ export const AimeAssistantDrawer: React.FC<AssistantDrawerProps> = ({ isOpen, on
 
   const quickPrompts = [
     "Tell me about Aime's AI experience",
-    "Summarize CivicLens AI project",
     "What stack does Aime use for frontend?",
     "Is Aime available for remote roles?"
   ];
@@ -75,7 +74,7 @@ export const AimeAssistantDrawer: React.FC<AssistantDrawerProps> = ({ isOpen, on
         {
           id: `ast-${Date.now()}`,
           sender: 'assistant',
-          text: "Aime Nsengiyumva specializes in React, Next.js, Node.js, PHP, and AI API integrations (Gemini & OpenAI). You can contact him directly at aime.nsengiyumva@gmail.com!",
+          text: "Aime Nsengiyumva specializes in React, Next.js, Node.js, PHP, and AI API integrations (Gemini & OpenAI). You can contact him directly at aime200816@gmail.com!",
           timestamp: new Date()
         }
       ]);

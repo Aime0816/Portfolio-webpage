@@ -4,7 +4,7 @@ import { Project, SkillCategory, ExperienceItem } from '../types';
 const civiclensImg = '/src/assets/images/civiclens_ai_preview_1785225507841.jpg';
 const maternalHubImg = '/src/assets/images/maternal_hub_preview_1785225521356.jpg';
 const shopMsImg = '/src/assets/images/shop_ms_preview_1785225533718.jpg';
-const VeriLensImg = '/src/assets/images/verilens_ai_preview_1785225547225.jpg';
+const VeriLensImg = '/src/assets/images/student_ms_preview_1785225547225.jpg';
 const aimeAvatarImg = '/src/assets/images/Me.png';
 
 export const PERSONAL_INFO = {
@@ -178,7 +178,7 @@ export const PROJECTS: Project[] = [
   longDescription:
     "VeriLens AI is designed to reduce the spread of fake news and misleading content by combining Generative AI, Natural Language Processing (NLP), and image verification techniques. Users can submit text, screenshots, links, or images, and the system analyzes the content, identifies suspicious claims, compares them with reliable sources, explains why a claim is true, false, or misleading, and provides a confidence score. The platform is built to support journalists, students, researchers, organizations, and the general public in making informed decisions based on verified information.",
 
-  image: "verilensImg",
+  image: VeriLensImg,
     category: "AI & ML",
 
   technologies: [
