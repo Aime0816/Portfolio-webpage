@@ -52,11 +52,13 @@ export const AimeAssistantDrawer: React.FC<AssistantDrawerProps> = ({ isOpen, on
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text.trim() })
+        body: JSON.stringify({ message: text.trim() }),
+        signal: AbortSignal.timeout(20000)
       });
 
+      if (!response.ok) throw new Error("Assistant unavailable");
       const data = await response.json();
-      const assistantReply = data.reply || "Aime Nsengiyumva is a Software Engineer & AI Developer. Feel free to explore his portfolio sections or reach out via email!";
+      const assistantReply = data.reply || "Aime Nsengiyumva is a Full-Stack Web Developer & System Analyst. Feel free to explore his portfolio sections or reach out via email!";
 
       setMessages((prev) => [
         ...prev,
@@ -74,7 +76,7 @@ export const AimeAssistantDrawer: React.FC<AssistantDrawerProps> = ({ isOpen, on
         {
           id: `ast-${Date.now()}`,
           sender: 'assistant',
-          text: "Aime Nsengiyumva specializes in React, Next.js, Node.js, PHP, and AI API integrations (Gemini & OpenAI). You can contact him directly at aime200816@gmail.com!",
+          text: "The assistant is unavailable right now. Please explore the portfolio or email aime200816@gmail.com.",
           timestamp: new Date()
         }
       ]);
@@ -113,7 +115,7 @@ export const AimeAssistantDrawer: React.FC<AssistantDrawerProps> = ({ isOpen, on
               </div>
               <div>
                 <h3 className="text-sm font-bold text-white">Ask Aime's AI</h3>
-                <p className="text-[11px] text-zinc-400">Powered by Gemini AI</p>
+                <p className="text-[11px] text-zinc-400">Portfolio facts · Optional Gemini AI</p>
               </div>
             </div>
 
@@ -195,8 +197,10 @@ export const AimeAssistantDrawer: React.FC<AssistantDrawerProps> = ({ isOpen, on
                 type="text"
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
-                placeholder="Ask about Aime's skills, experience, projects..."
-                className="flex-1 bg-zinc-950 border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
+                maxLength={1000}
+                  aria-label="Your question"
+                  placeholder="Ask about Aime's skills, experience, projects..."
+                className="min-w-0 flex-1 bg-zinc-950 border border-zinc-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-blue-500"
               />
               <button
                 type="submit"

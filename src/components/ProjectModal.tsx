@@ -54,7 +54,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <div className="relative rounded-xl overflow-hidden border border-zinc-800 aspect-video bg-zinc-900">
               <img
                 src={project.image}
-                alt={project.title}
+                alt={project.title + (project.id === "maternalhub" ? " homepage screenshot" : " project artwork")}
+                loading="lazy"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -115,7 +116,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Footer Action Bar */}
           <div className="p-4 sm:p-6 border-t border-zinc-800 bg-zinc-900/80 flex flex-wrap items-center justify-between gap-3">
-            <a
+            {project.githubUrl && (<a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -123,9 +124,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             >
               <Github className="w-4 h-4" />
               <span>View Source Code</span>
-            </a>
+            </a>)}
 
-            <a
+            {project.liveUrl && (<a
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -133,7 +134,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             >
               <ExternalLink className="w-4 h-4" />
               <span>Launch Live Demo</span>
-            </a>
+            </a>)}
           </div>
         </motion.div>
       </div>

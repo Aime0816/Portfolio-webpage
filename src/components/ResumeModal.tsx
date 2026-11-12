@@ -12,7 +12,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   if (!isOpen) return null;
 
   const handlePrint = () => {
-    window.print();
+    window.location.href = '/Aime-Nsengiyumva-CV.pdf';
   };
 
   return (
@@ -45,7 +45,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                 className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>Print / Save PDF</span>
+                <span>Download PDF</span>
               </button>
               <button
                 onClick={onClose}

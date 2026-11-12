@@ -117,30 +117,10 @@ export const Skills: React.FC = () => {
                             {skill.name}
                           </span>
                         </div>
-                        <div className="flex items-center gap-2">
-                          {skill.experienceYears && (
-                            <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-900 border border-zinc-800 text-zinc-400 font-mono">
-                              {skill.experienceYears}
-                            </span>
-                          )}
-                          <span className="font-mono text-blue-400 font-semibold">{skill.level}%</span>
-                        </div>
+
                       </div>
 
-                      {/* Progress Bar */}
-                      <div className="w-full h-1.5 bg-zinc-900 rounded-full overflow-hidden border border-zinc-800/50">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.8, ease: "easeOut" }}
-                          className={`h-full rounded-full ${
-                            skill.highlight
-                              ? 'bg-gradient-to-r from-blue-600 to-sky-400 shadow-[0_0_10px_rgba(59,130,246,0.5)]'
-                              : 'bg-zinc-600'
-                          }`}
-                        />
-                      </div>
+
                     </div>
                   ))}
                 </div>

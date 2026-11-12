@@ -10,6 +10,9 @@ export interface Project {
   githubUrl: string;
   liveUrl: string;
   featured: boolean;
+  status?: string;
+  number?: string;
+  color?: string;
   keyFeatures?: string[];
   metrics?: string;
 }
@@ -20,7 +23,7 @@ export interface SkillCategory {
   iconName: string;
   skills: {
     name: string;
-    level: number; // 1-100
+    level?: number; // 1-100
     icon?: string;
     highlight?: boolean;
     experienceYears?: string;

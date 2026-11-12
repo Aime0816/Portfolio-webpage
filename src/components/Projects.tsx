@@ -30,7 +30,7 @@ export const Projects: React.FC = () => {
             Selected <span className="text-blue-500">Projects</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto text-sm sm:text-base">
-            Real-world applications spanning AI integration, healthcare portals, e-commerce engines, and academic software.
+            Selected projects in community communication, interactive quizzes, infrastructure reporting, and maternal support.
           </p>
         </div>
 
@@ -72,7 +72,8 @@ export const Projects: React.FC = () => {
                 <div className="relative overflow-hidden aspect-video bg-zinc-900 border-b border-zinc-800">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={project.title + (project.id === "maternalhub" ? " homepage screenshot" : " project artwork")}
+                loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
@@ -127,7 +128,7 @@ export const Projects: React.FC = () => {
 
               {/* Action Buttons Footer */}
               <div className="p-6 pt-0 border-t border-zinc-900 mt-4 flex items-center justify-between gap-3 pt-4">
-                <a
+                {project.githubUrl && (<a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -136,7 +137,7 @@ export const Projects: React.FC = () => {
                 >
                   <Github className="w-4 h-4" />
                   <span>GitHub</span>
-                </a>
+                </a>)}
 
                 <div className="flex items-center gap-2">
                   <button
@@ -146,7 +147,7 @@ export const Projects: React.FC = () => {
                     Details
                   </button>
 
-                  <a
+                  {project.liveUrl && (<a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -155,7 +156,7 @@ export const Projects: React.FC = () => {
                   >
                     <span>Live Demo</span>
                     <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
+                  </a>)}
                 </div>
               </div>
             </motion.div>

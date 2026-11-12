@@ -23,12 +23,12 @@ export const Footer: React.FC = () => {
               </span>
             </a>
             <p className="text-xs text-zinc-500">
-              Software Engineer | AI Developer | UI/UX Designer
+              Full-Stack Web Developer | System Analyst
             </p>
           </div>
 
           {/* Nav Quick Links */}
-          <div className="flex items-center gap-6 text-xs text-zinc-400">
+          <div className="flex flex-wrap justify-center items-center gap-6 text-xs text-zinc-400">
             <a href="#hero" className="hover:text-white transition-colors">Home</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>

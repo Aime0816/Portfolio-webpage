@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aime-nsengiyumva.vercel.app/sitemap.xml

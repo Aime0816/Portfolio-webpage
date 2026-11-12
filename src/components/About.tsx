@@ -18,7 +18,7 @@ export const About: React.FC = () => {
             About <span className="text-blue-500">Aime Nsengiyumva</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto text-sm sm:text-base">
-            Software Engineer, AI Developer, and UI/UX Designer crafting intelligent digital solutions.
+            Full-Stack Web Developer & System Analyst, building practical digital solutions.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export const About: React.FC = () => {
 
               <h4 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
                 <Award className="w-5 h-5 text-blue-400" />
-                <span>Impact & Metrics</span>
+                <span>Work at a Glance</span>
               </h4>
 
               <div className="grid grid-cols-2 gap-4">
@@ -99,7 +99,7 @@ export const About: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-between text-xs text-zinc-400">
                   <span>Work Status</span>
-                  <span className="text-emerald-400 font-semibold">Open to Remote / Relocation</span>
+                  <span className="text-emerald-400 font-semibold">Projects & Collaboration</span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-zinc-400">
                   <span>Design Approach</span>

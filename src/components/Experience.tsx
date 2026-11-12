@@ -27,7 +27,7 @@ export const Experience: React.FC = () => {
             Work Experience & <span className="text-blue-500">Hackathons</span>
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto text-sm sm:text-base">
-            Professional roles, hackathon wins, and academic foundation in software engineering.
+            Project leadership, software development, and collaborative hackathon experiences.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export const Experience: React.FC = () => {
                   : 'text-zinc-400 hover:text-white hover:bg-zinc-900'
               }`}
             >
-              Hackathons & Awards
+              Hackathons
             </button>
           </div>
         </div>

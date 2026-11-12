@@ -35,33 +35,8 @@ export const Contact: React.FC = () => {
       return;
     }
 
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        setSubmitStatus('error');
-        setErrorMessage(data.error || 'Failed to submit message. Please try again or email directly.');
-      }
-    } catch (err) {
-      console.error('Contact submission error:', err);
-      // Fallback client response
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${encodeURIComponent(formData.subject || 'Portfolio enquiry')}&body=${encodeURIComponent(formData.message + '\n\nFrom: ' + formData.name + '\nEmail: ' + formData.email)}`;
+    setSubmitStatus('success');
   };
 
   return (
@@ -86,7 +61,7 @@ export const Contact: React.FC = () => {
           
           {/* Contact Details & Social Links Column */}
           <div className="lg:col-span-5 space-y-8">
-            <div className="p-8 rounded-2xl bg-zinc-950 border border-zinc-800/90 shadow-2xl space-y-6">
+            <div className="p-5 sm:p-8 rounded-2xl bg-zinc-950 border border-zinc-800/90 shadow-2xl space-y-6">
               <h3 className="text-xl font-bold text-white flex items-center gap-2">
                 <MessageSquare className="w-5 h-5 text-blue-400" />
                 <span>Contact Information</span>
@@ -101,7 +76,7 @@ export const Contact: React.FC = () => {
                     </div>
                     <div>
                       <p className="text-xs text-zinc-400 font-medium">Direct Email</p>
-                      <p className="text-sm font-semibold text-white">{PERSONAL_INFO.email}</p>
+                      <p className="text-sm font-semibold text-white break-all">{PERSONAL_INFO.email}</p>
                     </div>
                   </div>
                   <button
@@ -165,7 +140,7 @@ export const Contact: React.FC = () => {
 
           {/* Contact Form Column */}
           <div className="lg:col-span-7">
-            <div className="p-8 rounded-2xl bg-zinc-950 border border-zinc-800/90 shadow-2xl space-y-6">
+            <div className="p-5 sm:p-8 rounded-2xl bg-zinc-950 border border-zinc-800/90 shadow-2xl space-y-6">
               <h3 className="text-xl font-bold text-white flex items-center justify-between">
                 <span>Send a Message</span>
                 <Sparkles className="w-4 h-4 text-blue-400" />
@@ -175,8 +150,8 @@ export const Contact: React.FC = () => {
                 <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-sm flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold">Message Delivered!</p>
-                    <p className="text-xs text-emerald-200 mt-0.5">Thank you for reaching out. Aime will respond to your message shortly.</p>
+                    <p className="font-semibold">Email draft prepared</p>
+                    <p className="text-xs text-emerald-200 mt-0.5">Review and send the draft in your email app. This website has not sent or stored your message.</p>
                   </div>
                 </div>
               )}
@@ -195,7 +170,7 @@ export const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Name Input */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-zinc-300">
+                    <label htmlFor="contact-name-input" className="text-xs font-semibold text-zinc-300">
                       Your Name <span className="text-blue-500">*</span>
                     </label>
                     <input
@@ -212,7 +187,7 @@ export const Contact: React.FC = () => {
 
                   {/* Email Input */}
                   <div className="space-y-1.5">
-                    <label className="text-xs font-semibold text-zinc-300">
+                    <label htmlFor="contact-email-input" className="text-xs font-semibold text-zinc-300">
                       Your Email <span className="text-blue-500">*</span>
                     </label>
                     <input
@@ -230,7 +205,7 @@ export const Contact: React.FC = () => {
 
                 {/* Subject Input */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">Subject</label>
+                  <label htmlFor="contact-subject-input" className="text-xs font-semibold text-zinc-300">Subject</label>
                   <input
                     type="text"
                     name="subject"
@@ -244,7 +219,7 @@ export const Contact: React.FC = () => {
 
                 {/* Message Textarea */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-semibold text-zinc-300">
+                  <label htmlFor="contact-message-input" className="text-xs font-semibold text-zinc-300">
                     Message <span className="text-blue-500">*</span>
                   </label>
                   <textarea
@@ -271,7 +246,7 @@ export const Contact: React.FC = () => {
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      <span>Send Message</span>
+                      <span>Open Email Draft</span>
                     </>
                   )}
                 </button>
